@@ -1,7 +1,4 @@
-import 'package:bookly_app/Features/home/presentaion/views/home_view.dart';
-import 'package:bookly_app/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class SlidingText extends StatefulWidget {
   const SlidingText({
@@ -21,10 +18,8 @@ class _SlidingTextState extends State<SlidingText>
   @override
   void initState() {
     initSlidingAnimation();
-
     super.initState();
   }
-
 
   void initSlidingAnimation() {
     slidingAnimationController =
