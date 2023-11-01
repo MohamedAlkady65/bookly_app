@@ -1,9 +1,12 @@
-
+import 'package:bookly_app/Features/home/presentaion/views/home_view.dart';
+import 'package:bookly_app/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class SlidingText extends StatefulWidget {
   const SlidingText({
-    super.key, required this.text,
+    super.key,
+    required this.text,
   });
   final String text;
   @override
@@ -17,6 +20,13 @@ class _SlidingTextState extends State<SlidingText>
 
   @override
   void initState() {
+    initSlidingAnimation();
+
+    super.initState();
+  }
+
+
+  void initSlidingAnimation() {
     slidingAnimationController =
         AnimationController(vsync: this, duration: const Duration(seconds: 1));
 
@@ -29,8 +39,6 @@ class _SlidingTextState extends State<SlidingText>
     // slidingAnimation.addListener(() {
     //   setState(() {});
     // });
-
-    super.initState();
   }
 
   @override
@@ -46,8 +54,8 @@ class _SlidingTextState extends State<SlidingText>
       builder: (context, child) {
         return SlideTransition(
           position: slidingAnimation,
-          child:  Text(
-           widget.text ,
+          child: Text(
+            widget.text,
             textAlign: TextAlign.center,
           ),
         );
