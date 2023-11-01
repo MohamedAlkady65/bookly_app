@@ -1,4 +1,5 @@
 import 'package:bookly_app/Core/utils/assets_data.dart';
+import 'package:bookly_app/Features/Splash/presentation/views/widgets/sliding_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -18,9 +19,8 @@ class SplashViewBody extends StatelessWidget {
         const SizedBox(
           height: 10,
         ),
-        const Text(
-          "Read Free Books",
-          textAlign: TextAlign.center,
+        const SlidingText(
+          text: "Read Free Books",
         )
       ],
     );
