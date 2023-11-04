@@ -1,4 +1,5 @@
 import 'package:bookly_app/Core/utils/styles.dart';
+import 'package:bookly_app/Features/home/presentaion/views/widgets/best_seller_item.dart';
 import 'package:flutter/material.dart';
 
 class BestSeller extends StatelessWidget {
@@ -14,7 +15,11 @@ class BestSeller extends StatelessWidget {
           Text(
             "Best Seller",
             style: Styles.text18SemiBold,
-          )
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          BestSellerItem(),
         ],
       ),
     );
