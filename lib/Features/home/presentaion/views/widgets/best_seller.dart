@@ -13,7 +13,7 @@ class BestSeller extends StatelessWidget {
         children: [
           Text(
             "Best Seller",
-            style: Styles.title,
+            style: Styles.text18SemiBold,
           )
         ],
       ),
