@@ -1,6 +1,4 @@
-
 import 'package:flutter/material.dart';
-
 class BookDetailsAppBar extends StatelessWidget {
   const BookDetailsAppBar({
     super.key,

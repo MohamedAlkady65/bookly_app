@@ -1,4 +1,5 @@
 import 'package:bookly_app/Features/home/presentaion/views/widgets/book_details_app_bar.dart';
+import 'package:bookly_app/Features/home/presentaion/views/widgets/book_details_section.dart';
 import 'package:flutter/material.dart';
 
 class BookDetailsBody extends StatelessWidget {
@@ -9,8 +10,10 @@ class BookDetailsBody extends StatelessWidget {
     return const Padding(
       padding: EdgeInsets.symmetric(horizontal: 30),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           BookDetailsAppBar(),
+          BookDetailsSection(),
         ],
       ),
     );
