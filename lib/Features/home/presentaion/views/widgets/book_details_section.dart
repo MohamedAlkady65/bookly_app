@@ -10,11 +10,15 @@ class BookDetailsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisSize: MainAxisSize.min,
       children: [
         const SizedBox(
           height: 20,
         ),
-        const BookDetailsImage(),
+        SizedBox(
+          width: MediaQuery.of(context).size.width * 0.4,
+          child: const BookDetailsImage(),
+        ),
         const SizedBox(
           height: 40,
         ),
