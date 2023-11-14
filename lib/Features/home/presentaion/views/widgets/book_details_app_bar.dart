@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class BookDetailsAppBar extends StatelessWidget {
   const BookDetailsAppBar({
     super.key,
@@ -11,7 +12,9 @@ class BookDetailsAppBar extends StatelessWidget {
       children: [
         IconButton(
           iconSize: 30,
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           icon: const Icon(Icons.close),
         ),
         IconButton(
