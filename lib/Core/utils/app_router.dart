@@ -10,7 +10,7 @@ abstract class AppRouter {
   static const searchView = '/search_view';
   static final router = GoRouter(routes: [
     GoRoute(
-      path: '/a',
+      path: '/',
       builder: (context, state) => const SplashView(),
     ),
     GoRoute(
@@ -22,7 +22,7 @@ abstract class AppRouter {
       builder: (context, state) => const BookDetailsView(),
     ),
     GoRoute(
-      path: "/",
+      path: searchView,
       builder: (context, state) => const SearchView(),
     ),
   ]);
