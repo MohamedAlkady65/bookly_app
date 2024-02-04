@@ -9,7 +9,7 @@ class HomeRepoImple implements HomeRepo {
 
   HomeRepoImple({required this.service});
   @override
-  Future<Either<Failure, List<BookModel>>> fetchBestSellerBooks() async {
+  Future<Either<Failure, List<BookModel>>> fetchNewestSellerBooks() async {
     try {
       final data = await service.get(
           endpoint:
@@ -28,7 +28,6 @@ class HomeRepoImple implements HomeRepo {
 
   @override
   Future<Either<Failure, List<BookModel>>> fetchFeaturedBooks() {
-    // TODO: implement fetchFeaturedBooks
     throw UnimplementedError();
   }
 }
