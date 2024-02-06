@@ -8,9 +8,9 @@ import 'package:dio/dio.dart';
 class HomeRepoImple implements HomeRepo {
   final ApiService service;
 
-  HomeRepoImple({required this.service});
+  HomeRepoImple(this.service);
   @override
-  Future<Either<Failure, List<BookModel>>> fetchNewestSellerBooks() async {
+  Future<Either<Failure, List<BookModel>>> fetchNewestBooks() async {
     try {
       final data = await service.get(
           endpoint:
@@ -33,8 +33,7 @@ class HomeRepoImple implements HomeRepo {
   Future<Either<Failure, List<BookModel>>> fetchFeaturedBooks() async {
     try {
       final data = await service.get(
-          endpoint:
-              "/volumes?Filtering=free-ebooks&q=subject:programming");
+          endpoint: "/volumes?Filtering=free-ebooks&q=subject:programming");
 
       final List<BookModel> books =
           (data["items"] as List<Map<String, dynamic>>)
