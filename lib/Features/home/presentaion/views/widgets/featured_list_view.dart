@@ -23,7 +23,7 @@ class FeaturedListView extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               padding: const EdgeInsets.symmetric(horizontal: 10),
               itemBuilder: (context, index) => FeaturedItem(
-                imageUrl: state.books[index].volumeInfo.imageLinks.thumbnail,
+                bookModel: state.books[index],
               ),
             ),
           );
