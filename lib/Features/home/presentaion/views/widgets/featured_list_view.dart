@@ -1,4 +1,4 @@
-import 'package:bookly_app/Core/utils/widgets/loadingWidget.dart';
+import 'package:bookly_app/Core/utils/widgets/custom_loading_widget.dart';
 import 'package:bookly_app/Features/home/presentaion/manager/featured_books/featured_books_cubit.dart';
 import 'package:bookly_app/Features/home/presentaion/views/widgets/featured_item.dart';
 import 'package:flutter/material.dart';
@@ -30,7 +30,7 @@ class FeaturedListView extends StatelessWidget {
         } else if (state is FeaturedBooksFailure) {
           return ErrorWidget(state.errMessage);
         } else {
-          return const LoadingWidget();
+          return const CustomLoadingWidget();
         }
       },
     );

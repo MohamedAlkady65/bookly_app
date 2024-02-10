@@ -15,7 +15,8 @@ class SearchListView extends StatelessWidget {
         ),
         padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 24),
         itemCount: 10,
-        itemBuilder: (context, index) => const BookItem(),
+        itemBuilder: (context, index) => const SizedBox(),
+        // itemBuilder: (context, index) => const BookItem(),
       ),
     );
   }

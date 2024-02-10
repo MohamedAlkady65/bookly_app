@@ -16,10 +16,10 @@ class HomeRepoImple implements HomeRepo {
           endpoint:
               "/volumes?Filtering=free-ebooks&q=subject:programming&orderBy=newest");
 
-      final List<BookModel> books =
-          (data["items"] as List<Map<String, dynamic>>)
-              .map<BookModel>((e) => BookModel.fromJson(e))
-              .toList();
+      final List<BookModel> books = (data["items"] as List<dynamic>)
+          .cast<Map<String, dynamic>>()
+          .map<BookModel>((e) => BookModel.fromJson(e))
+          .toList();
 
       return right(books);
     } on DioException catch (e) {
